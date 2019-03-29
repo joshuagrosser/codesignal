@@ -3,6 +3,9 @@ package com.grosser.codesignal;
 import org.springframework.stereotype.Component;
 
 
+/**
+ * Given an array of integers, find the pair of adjacent elements that has the largest product and return that product.
+ */
 @Component
 public class AdjacentElementsProduct {
 

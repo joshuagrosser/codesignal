@@ -4,6 +4,9 @@ import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 
+/**
+ * Given the string, check if it is a palindrome.
+ */
 @Component
 public class CheckPalindrome {
 
