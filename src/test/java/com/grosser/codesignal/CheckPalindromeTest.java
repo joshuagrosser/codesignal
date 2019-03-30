@@ -13,50 +13,50 @@ import static org.junit.Assert.*;
 public class CheckPalindromeTest {
 
     @Autowired
-    CheckPalindrome palindrome;
+    CheckPalindrome instance;
 
     @Test
     public void testNotNull() {
-        assertNotNull(palindrome);
+        assertNotNull(instance);
     }
 
     @Test
     public void checkPalindrome001() {
-        assertTrue(palindrome.checkPalindrome("aabaa"));
+        assertTrue(instance.checkPalindrome("aabaa"));
     }
 
     @Test
     public void checkPalindrome002() {
-        assertFalse(palindrome.checkPalindrome("abac"));
+        assertFalse(instance.checkPalindrome("abac"));
     }
 
     @Test
     public void checkPalindrome003() {
-        assertTrue(palindrome.checkPalindrome("a"));
+        assertTrue(instance.checkPalindrome("a"));
     }
 
     @Test
     public void checkPalindrome004() {
-        assertFalse(palindrome.checkPalindrome("az"));
+        assertFalse(instance.checkPalindrome("az"));
     }
 
     @Test
     public void checkPalindrome005(){
-        assertTrue(palindrome.checkPalindrome("abacaba"));
+        assertTrue(instance.checkPalindrome("abacaba"));
     }
 
     @Test
     public void checkPalindrome006(){
-        assertTrue(palindrome.checkPalindrome("z"));
+        assertTrue(instance.checkPalindrome("z"));
     }
 
     @Test
     public void checkPalindrome007(){
-        assertFalse(palindrome.checkPalindrome("01"));
+        assertFalse(instance.checkPalindrome("01"));
     }
 
     @Test
     public void checkPalindrome008(){
-        assertTrue(palindrome.checkPalindrome("101"));
+        assertTrue(instance.checkPalindrome("101"));
     }
 }

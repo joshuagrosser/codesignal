@@ -14,40 +14,40 @@ import static org.junit.Assert.assertNotNull;
 public class CenturyFromYearTest {
 
     @Autowired
-    CenturyFromYear centuryFromYear;
+    CenturyFromYear instance;
 
     @Test
     public void testNotNull() {
-        assertNotNull(centuryFromYear);
+        assertNotNull(instance);
     }
 
     @Test
     public void test1905() {
-        assertEquals(20, this.centuryFromYear.centuryFromYear(1905));
+        assertEquals(20, this.instance.centuryFromYear(1905));
     }
 
     @Test
     public void test1700() {
-        assertEquals(17, this.centuryFromYear.centuryFromYear(1700));
+        assertEquals(17, this.instance.centuryFromYear(1700));
     }
 
     @Test
     public void test2001() {
-        assertEquals(21, this.centuryFromYear.centuryFromYear(2001));
+        assertEquals(21, this.instance.centuryFromYear(2001));
     }
 
     @Test
     public void test200() {
-        assertEquals(2, this.centuryFromYear.centuryFromYear(200));
+        assertEquals(2, this.instance.centuryFromYear(200));
     }
 
     @Test
     public void test374() {
-        assertEquals(4, this.centuryFromYear.centuryFromYear(374));
+        assertEquals(4, this.instance.centuryFromYear(374));
     }
 
     @Test
     public void testNegativeNumber() {
-        assertEquals(-1, this.centuryFromYear.centuryFromYear(-100));
+        assertEquals(-1, this.instance.centuryFromYear(-100));
     }
 }
