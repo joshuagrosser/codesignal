@@ -77,4 +77,27 @@ public class BoxBlurTest {
         assertArrayEquals(result, instance.boxBlur(image));
     }
 
+    @Test
+    public void test005() {
+        int[][] image = {
+                {36, 0, 18, 9, 9, 45, 27},
+                {27, 0, 54, 9, 0, 63, 90},
+                {81, 63, 72, 45, 18, 27, 0},
+                {0, 0, 9, 81, 27, 18, 45},
+                {45, 45, 27, 27, 90, 81, 72},
+                {45, 18, 9, 0, 9, 18, 45},
+                {27, 81, 36, 63, 63, 72, 81}
+        };
+
+        int[][] result = {
+                {39, 30, 26, 25, 31},
+                {34, 37, 35, 32, 32},
+                {38, 41, 44, 46, 42},
+                {22, 24, 31, 39, 45},
+                {37, 34, 36, 47, 59}
+        };
+
+        assertArrayEquals(result, instance.boxBlur(image));
+    }
+
 }
