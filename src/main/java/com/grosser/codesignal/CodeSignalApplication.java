@@ -1,4 +1,4 @@
-package com.grosser.codesignal.practice;
+package com.grosser.codesignal;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
