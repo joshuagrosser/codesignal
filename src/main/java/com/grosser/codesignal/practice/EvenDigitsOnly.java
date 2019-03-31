@@ -1,4 +1,4 @@
-package com.grosser.codesignal;
+package com.grosser.codesignal.practice;
 
 import org.springframework.stereotype.Component;
 
