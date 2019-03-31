@@ -40,9 +40,11 @@ public class FirstDuplicate {
         // if reached the end of the list and no duplicates are encountered, return -1
         // else, return the value of the first duplicate encountered
         int result = -1;
+        int numComparisons = 0;
 
         // Circuit break
         if (a.length <= 1) {
+            System.out.println(numComparisons);
             return -1;
         }
 
@@ -52,11 +54,13 @@ public class FirstDuplicate {
                     result = a[i];
                     break; // first duplicate found
                 }
+                numComparisons++;
             }
             if (result != -1) {
                 break;
             }
         }
+        System.out.println(numComparisons);
         return result;
     }
 
@@ -70,14 +74,14 @@ public class FirstDuplicate {
      */
     int firstDuplicateEfficient(int[] a) {
 
-        // Need to track
-        // a) Which numbers have already been compared
-        // b) How far through the array we have traversed
-        for (int i = 0; i < a.length; i++)
-
-            if (a[Math.abs(a[i]) - 1] < 0)
+        int numComparisons = 0;
+        for (int i = 0; i < a.length; i++) {
+            numComparisons++;
+            if (a[Math.abs(a[i]) - 1] < 0) {
                 // Found the first duplicate
+                System.out.println(numComparisons);
                 return Math.abs(a[i]);
+            }
             else {
                 // Set a[val-1] as negative of the same value, so if a[0] == 2, then a[0] = -2
                 // Its technically the same number, just the inverse, so you can still do a comparison
@@ -87,6 +91,8 @@ public class FirstDuplicate {
                 // IMPORTANT: This saves compute time because you only have to traverse the array ONCE (one 'for' loop)
                 a[Math.abs(a[i]) - 1] = -a[Math.abs(a[i]) - 1];
             }
+        }
+        System.out.println(numComparisons);
         return -1;
     }
 
