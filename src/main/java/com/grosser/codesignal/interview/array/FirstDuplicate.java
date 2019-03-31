@@ -7,6 +7,10 @@ import org.springframework.stereotype.Component;
  * which the second occurrence has the minimal index. In other words, if there are more than 1 duplicated numbers,
  * return the number for which the second occurrence has a smaller index than the second occurrence of the other
  * number does. If there are no such elements, return -1.
+ * <p></p>
+ * Guaranteed constraints:
+ * 1 ≤ a.length ≤ 10^5,
+ * 1 ≤ a[i] ≤ a.length.
  * <p>
  * Example
  * <p>
@@ -60,6 +64,9 @@ public class FirstDuplicate {
      * This solution is more efficient and runs at O(n) time for finding duplicates because there is only a single
      * loop through the array. Previous values that have already been scanned are TRACKED by setting the value as a
      * negative version of the same value. Comparisons are done using the absolute value.
+     *
+     * Instead of iterating through the list in order from a[0] to a[a.length-1], this algorithm iterates through the
+     * list by using the actual value at a[i] since 1 ≤ a[i] ≤ a.length.
      */
     int firstDuplicateEfficient(int[] a) {
 
