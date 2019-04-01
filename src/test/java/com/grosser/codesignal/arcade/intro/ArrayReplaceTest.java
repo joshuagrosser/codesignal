@@ -1,4 +1,4 @@
-package com.grosser.codesignal.practice;
+package com.grosser.codesignal.arcade.intro;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
