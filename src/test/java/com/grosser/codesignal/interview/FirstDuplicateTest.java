@@ -1,4 +1,4 @@
-package com.grosser.codesignal.interview.array;
+package com.grosser.codesignal.interview;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
