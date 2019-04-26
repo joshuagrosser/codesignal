@@ -1,13 +1,14 @@
-package com.grosser.codesignal.interview;
+package com.grosser.codesignal.playground;
 
-class Tree<T> {
+@SuppressWarnings("Duplicates")
+public class Tree<T> {
     Tree(T x) {
         value = x;
     }
 
-    T value;
-    Tree<T> left;
-    Tree<T> right;
+    public T value;
+    public Tree<T> left;
+    public Tree<T> right;
 
     @Override
     public String toString() {
