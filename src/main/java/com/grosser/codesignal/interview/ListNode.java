@@ -12,7 +12,6 @@ public class ListNode<T> {
     T value;
     ListNode<T> next;
 
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
