@@ -21,7 +21,6 @@ public class BinaryTreeTest {
         root.right.right = new BinaryTree<>(75);
     }
 
-
     @Test
     public void testDFS001(){
         BinaryTree<Integer> result = root.depthFirstSearch(75);
@@ -50,6 +49,11 @@ public class BinaryTreeTest {
     public void testDFS005() {
         BinaryTree<Integer> result = root.depthFirstSearch(99);
         assertNull(result);
+    }
+
+    @Test
+    public void testBFS001() {
+        root.breadthFirstTraversal(1);
     }
 
 

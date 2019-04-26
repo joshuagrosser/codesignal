@@ -1,5 +1,6 @@
 package com.grosser.codesignal.playground;
 
+import java.util.LinkedList;
 import java.util.Objects;
 
 public class BinaryTree<T> {
@@ -39,6 +40,21 @@ public class BinaryTree<T> {
             }
         }
         return null;
+    }
+
+    void breadthFirstTraversal(T toFind){
+        LinkedList<BinaryTree<T>> toTraverse = new LinkedList<>();
+        toTraverse.add(this);
+
+        // Iterate through the nodes under the root node
+        while(toTraverse.size() > 0){
+            BinaryTree<T> node = toTraverse.remove();
+            System.out.println(node.value);
+            if(node.left != null)
+                toTraverse.add(node.left);
+            if(node.right != null)
+                toTraverse.add(node.right);
+        }
     }
 
     @Override
