@@ -1,5 +1,6 @@
 package com.grosser.codesignal.interview;
 
+import com.grosser.codesignal.playground.Tree;
 import org.springframework.stereotype.Component;
 
 import java.util.LinkedList;

@@ -2,7 +2,7 @@ package com.grosser.codesignal.playground;
 
 @SuppressWarnings("Duplicates")
 public class Tree<T> {
-    Tree(T x) {
+    public Tree(T x) {
         value = x;
     }
 
