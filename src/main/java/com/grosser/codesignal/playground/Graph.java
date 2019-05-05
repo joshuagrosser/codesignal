@@ -7,7 +7,15 @@ import java.util.*;
  * @param <T> the type of object contained in each vertex in the graph.
  */
 public class Graph<T> {
+
+    /**
+     * List of vertices is separate from the adjacency list to minimize memory usage.
+     */
     private List<Vertex<T>> vertices;
+
+    /**
+     * Adjacency list only contains the ids of the vertices to represent relationships with minimum space usage.
+     */
     private List<LinkedList<Integer>> adjacencyList;
 
     /**
@@ -45,7 +53,7 @@ public class Graph<T> {
      * @param toFind the object to search for.
      * @return the vertex that the object was found in.
      */
-    public Graph<T> breadthFirstSearch(T toFind){
+    public Vertex<T> breadthFirstSearch(T toFind){
         throw new UnsupportedOperationException();
     }
 
@@ -54,7 +62,7 @@ public class Graph<T> {
      * @param toFind the object to search for.
      * @return the vertex that the object was found in.
      */
-    public Graph<T> depthFirstSearch(T toFind){
+    public Vertex<T> depthFirstSearch(T toFind){
 
         Stack<Vertex<T>> stack = new Stack<>();
 

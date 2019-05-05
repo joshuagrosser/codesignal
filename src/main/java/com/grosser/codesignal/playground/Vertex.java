@@ -4,16 +4,16 @@ import java.util.Objects;
 
 public class Vertex<T> {
     private int id;
-    private T object;
+    private T value;
     private boolean visited = false;
 
     public Vertex(int id, T obj){
         this.id = id;
-        this.object = obj;
+        this.value = obj;
     }
 
     public String toString(){
-        return object.toString();
+        return value.toString();
     }
 
     public boolean isVisited() {
@@ -28,8 +28,8 @@ public class Vertex<T> {
         return id;
     }
 
-    public T getObject(){
-        return object;
+    public T getValue(){
+        return value;
     }
 
     @Override
@@ -39,11 +39,11 @@ public class Vertex<T> {
         Vertex<?> vertex = (Vertex<?>) o;
         return id == vertex.id &&
                 visited == vertex.visited &&
-                Objects.equals(object, vertex.object);
+                Objects.equals(value, vertex.value);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, object, visited);
+        return Objects.hash(id, value, visited);
     }
 }
