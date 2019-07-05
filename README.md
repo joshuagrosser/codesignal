@@ -1,5 +1,3 @@
 # Codesignal Practice Exercises
-Profile:
-https://app.codesignal.com/profile/vvulfmann
-
+Codesignal exercise solutions in Java.
 
